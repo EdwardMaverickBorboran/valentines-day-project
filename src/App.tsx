@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import { useEffect } from "react";
+import "./firebaseConfig.js";
+import { collection, addDoc, getFirestore } from "firebase/firestore";
+import { getApp } from "firebase/app";
 
 export default function Page() {
   const [step, setStep] = useState(0);
@@ -34,6 +37,24 @@ export default function Page() {
     setGifIndex((gifIndex + 1) % gifs.length);
   };
 
+  const handleYesClick = async () => {
+    setYesPressed(true);
+    await sendResponse({ response: "yes" });
+  };
+
+  interface Response {
+    response: string;
+  }
+  const db = getFirestore(getApp());
+
+  const sendResponse = async (response: Response): Promise<void> => {
+    try {
+      await addDoc(collection(db, "responses"), response);
+    } catch (error) {
+      console.error("Error sending response:", error);
+    }
+  };
+
   const getNoButtonText = () => {
     const phrases = [
       'No',
@@ -57,7 +78,7 @@ export default function Page() {
     return phrases[Math.min(noCount, phrases.length - 1)];
   };
 
-  const renderContent = () => {
+  const renderContent = (): JSX.Element => {
     switch (step) {
       case 0:
         return (
@@ -109,7 +130,7 @@ export default function Page() {
                     <button
                       className={"yes-button"}
                       style={{ fontFamily: "Andale Mono, Monospace", fontSize: yesButtonSize }}
-                      onClick={() => setYesPressed(true)}
+                      onClick={handleYesClick}
                     >
                       Yes
                     </button>
@@ -132,7 +153,7 @@ export default function Page() {
           </div>
         );
       default:
-        return null;
+        return <div></div>;
     }
   };
 
@@ -142,5 +163,5 @@ export default function Page() {
     }
   }, [noCount]);
 
-  return renderContent();
+return renderContent();
 }
