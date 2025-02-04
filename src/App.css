@@ -1,0 +1,180 @@
+.valentine-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .yes-button {
+    font-family: "Andale Mono, Monospace";
+    background-color: #25de51;
+    color: #fff;
+    font-weight: bold; 
+    padding: 8px 16px; 
+    border-radius: 8px; 
+    margin-right: 8px; 
+  }
+  
+  .yes-button:hover {
+    background-color: #46a05a; 
+  }
+  
+  .no-button {
+    background-color: #ff0000;
+    color: #fff; 
+    font-weight: bold; 
+    padding: 8px 16px; 
+    border-radius: 8px;
+  }
+  
+  .no-button:hover {
+    background-color: #c82333; 
+  }
+ 
+  .text-container {
+    font-size: 2.25rem; 
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+  }
+  
+  .centered-container {
+    display: flex;
+    font-size: large;
+    font-family: "Andale Mono, Monospace";
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .github-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #007bff; 
+    text-decoration: none;
+  }
+
+  *::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DCE7E1;
+    border: 6px double #FFFFFF;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #FCC5DF;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #FCC5DF;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #CF3E6E;
+    border: 2px double #FFFFFF;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #FC4985;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #FC4985;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background-image {
+    background-image: url('/pink bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .start-button {
+    background-color: #25de51;
+    color: #fff;
+    font-weight: bold; 
+    font-size: 25px;
+    padding: 22px 45px; 
+    border-radius: 8px; 
+    margin-right: 8px; 
+  }
+
+  .start-button:hover {
+    background-color: #46a05a; 
+  }
+
+  .question1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .ready-button {
+    background-color: #25de51;
+    color: #fff;
+    font-weight: bold; 
+    font-size: 25px;
+    padding: 22px 45px; 
+    border-radius: 8px; 
+    margin-right: 8px; 
+  }
+
+  .ready-button:hover {
+    background-color: #46a05a; 
+  }
+
+  .question2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .begin-button {
+    background-color: #25de51;
+    color: #fff;
+    font-weight: bold; 
+    font-size: 25px;
+    padding: 22px 45px; 
+    border-radius: 8px; 
+    margin-right: 8px; 
+  }
+
+  .begin-button:hover {
+    background-color: #46a05a; 
+  }
+
+  .thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
